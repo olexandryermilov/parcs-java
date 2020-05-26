@@ -20,12 +20,7 @@ public class Bluck {
             c.write(n);
             System.out.println("Waiting for result...");
             long x = c.readLong();
-            StringBuilder res = new StringBuilder();
-            for(int i = 0; i<x; i++) {
-                res.append(c.readLong());
-                res.append(" ");
-            }
-            System.out.println("Result: " + res.toString());
+            System.out.println("Result: " + x);
         }
         curtask.end();
     }

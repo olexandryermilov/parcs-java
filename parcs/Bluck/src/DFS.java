@@ -17,11 +17,11 @@ public class DFS implements AM {
         Node n = (Node) info.parent.readObject();
         System.out.println("[" + n.getL() + " " + n.getR() + "] Build started.");
 
-        ArrayList<Integer> res = new ArrayList<>();
+        long sum = 0L;
         for (int i = n.getL(); i <= n.getR(); i++) {
-            if (isPrime(i)) res.add(i);
+            if (isPrime(i)) sum+=i;
         }
         System.out.println("[" + n.getL() + " " + n.getR() + "] Build finished.");
-        info.parent.write(res);
+        info.parent.write(sum);
     }
 }
