@@ -25,6 +25,7 @@ public class Bluck {
     }
 
     public static ArrayList<Node> fromFile(String filename) throws Exception {
+        System.out.println("got here");
         Scanner sc = new Scanner(new File(filename));
         System.out.println("created scanner");
         int l = sc.nextInt();
