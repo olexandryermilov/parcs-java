@@ -26,8 +26,11 @@ public class Bluck {
 
     public static ArrayList<Node> fromFile(String filename) throws Exception {
         Scanner sc = new Scanner(new File(filename));
+        System.out.println("created scanner");
         int l = sc.nextInt();
+        System.out.println(l);
         int r = sc.nextInt();
+        System.out.println(r);
         ArrayList<Node> res = new ArrayList<>();
         int _l = l;
         int mod = (r - l) / NODES;
