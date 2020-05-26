@@ -11,17 +11,17 @@ public class Bluck {
         task curtask = new task();
         curtask.addJarFile("DFS.jar");
         ArrayList<Node> nodes = fromFile(curtask.findFile("input"));
-
+        long x = 0;
         AMInfo info = new AMInfo(curtask, null);
         for(Node n: nodes) {
             point p = info.createPoint();
             channel c = p.createChannel();
             p.execute("DFS");
             c.write(n);
-            System.out.println("Waiting for result...");
-            long x = c.readLong();
-            System.out.println("Result: " + x);
+            x += c.readLong();
         }
+        System.out.println("Waiting for result...");
+        System.out.println("Result: " + x);
         curtask.end();
     }
 
@@ -34,11 +34,8 @@ public class Bluck {
         int r = sc.nextInt();
         System.out.println(r);
         ArrayList<Node> res = new ArrayList<>();
-        int _l = l;
-        int mod = (r - l) / NODES;
         for (int i = 0; i < NODES; i++) {
-            res.add(new Node(_l, _l + mod));
-            _l = Math.min(mod + _l, r);
+            res.add(new Node(l + i, r + i));
         }
         return res;
     }

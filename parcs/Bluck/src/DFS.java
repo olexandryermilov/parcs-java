@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 import parcs.*;
 
 public class DFS implements AM {
@@ -18,7 +16,7 @@ public class DFS implements AM {
         System.out.println("[" + n.getL() + " " + n.getR() + "] Build started.");
 
         long sum = 0L;
-        for (int i = n.getL(); i <= n.getR(); i++) {
+        for (int i = n.getL(); i <= n.getR(); i+=2) {
             if (isPrime(i)) sum+=i;
         }
         System.out.println("[" + n.getL() + " " + n.getR() + "] Build finished.");
