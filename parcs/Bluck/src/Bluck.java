@@ -19,7 +19,13 @@ public class Bluck {
             p.execute("DFS");
             c.write(n);
             System.out.println("Waiting for result...");
-            System.out.println("Result: " + c.readLong());
+            long x = c.readLong();
+            StringBuilder res = new StringBuilder();
+            for(int i = 0; i<x; i++) {
+                res.append(c.readLong());
+                res.append(" ");
+            }
+            System.out.println("Result: " + res.toString());
         }
         curtask.end();
     }
