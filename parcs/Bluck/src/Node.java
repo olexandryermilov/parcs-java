@@ -3,20 +3,12 @@ import java.io.Serializable;
 public class Node implements Serializable {
     private int l;
     private int r;
-    private int time;
+    private int div;
 
-    public Node(int l, int r) {
+    public Node(int l, int r, int div) {
         this.l = l;
         this.r = r;
-        this.time = 0;
-    }
-
-    public int getTime() {
-        return time;
-    }
-
-    public void setTime(int time) {
-        this.time = time;
+        this.div = div;
     }
 
     public int getL() {
@@ -33,5 +25,13 @@ public class Node implements Serializable {
 
     public void setR(int r) {
         this.r = r;
+    }
+
+    public int getDiv() {
+        return div;
+    }
+
+    public void setDiv(int div) {
+        this.div = div;
     }
 }

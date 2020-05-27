@@ -25,7 +25,7 @@ public class Bluck {
         curtask.end();
     }
 
-    public static ArrayList<Node> fromFile(String filename) throws Exception {
+    private static ArrayList<Node> fromFile(String filename) throws Exception {
         System.out.println("got here");
         Scanner sc = new Scanner(new File(filename));
         System.out.println("created scanner");
@@ -35,7 +35,7 @@ public class Bluck {
         System.out.println(r);
         ArrayList<Node> res = new ArrayList<>();
         for (int i = 0; i < NODES; i++) {
-            res.add(new Node(l + i, r + i));
+            res.add(new Node(l, r, 2 * i + 1));
         }
         return res;
     }
