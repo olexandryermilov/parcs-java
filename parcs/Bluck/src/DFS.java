@@ -19,7 +19,7 @@ public class DFS implements AM {
 
         long sum = 0L;
         int start = n.getL();
-        while (start % 2 * NODES != n.getDiv()) start++;
+        while (start % (2 * NODES) != n.getDiv()) start++;
         for (int i = start; i <= n.getR(); i += 2 * NODES) {
             if (isPrime(i)) sum += i;
         }

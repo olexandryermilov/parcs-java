@@ -7,7 +7,7 @@ public class Main {
         if (x == 1) return false;
         if (x == 2) return true;
         if (x % 2 == 0) return false;
-        for (int i = 3; i * i <= x; i += 1) {
+        for (int i = 3; i * i <= x; i += 2) {
             if (x % i == 0) return false;
         }
         return true;
@@ -20,7 +20,7 @@ public class Main {
         System.out.println(l);
         int r = sc.nextInt();
         System.out.println(r);
-        Node n = new Node(l, r);
+        Node n = new Node(l, r, 0);
         System.out.println("[" + n.getL() + " " + n.getR() + "] Build started.");
 
         long sum = 0L;
